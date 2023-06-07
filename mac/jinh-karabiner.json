@@ -95,7 +95,7 @@
       ]
     },
     {
-      "description": "` -> escape(alone), `(right_command), ~(shift) for normal keyboard",
+      "description": "` -> escape(alone), `(left_shift), ~(right_shift) for normal keyboard",
       "manipulators": [
         {
           "type": "basic",
@@ -111,7 +111,7 @@
           "from": {
             "key_code": "grave_accent_and_tilde",
             "modifiers": {
-              "mandatory": ["right_command"]
+              "mandatory": ["left_shift"]
             }
           },
           "to": {
@@ -123,25 +123,25 @@
           "from": {
             "key_code": "grave_accent_and_tilde",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": ["right_shift"]
             }
           },
           "to": {
             "key_code": "grave_accent_and_tilde",
-            "modifiers": ["left_shift"]
+            "modifiers": ["right_shift"]
           }
         }
       ]
     },
     {
-      "description": "escape -> ~(shift), `(right_command) for hhkb",
+      "description": "escape -> ~(right_shift), `(left_shift) for hhkb",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "escape",
             "modifiers": {
-              "mandatory": ["right_command"]
+              "mandatory": ["left_shift"]
             }
           },
           "to": [
@@ -155,13 +155,13 @@
           "from": {
             "key_code": "escape",
             "modifiers": {
-              "mandatory": ["shift"]
+              "mandatory": ["right_shift"]
             }
           },
           "to": [
             {
               "key_code": "grave_accent_and_tilde",
-              "modifiers": ["left_shift"]
+              "modifiers": ["right_shift"]
             }
           ]
         }
