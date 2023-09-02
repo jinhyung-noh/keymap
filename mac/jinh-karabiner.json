@@ -164,8 +164,49 @@
               "modifiers": ["right_shift"]
             }
           ]
-        }
+        },
+				{
+					"type": "basic",
+					"from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+					},
+					"to": [
+							{
+								"key_code": "grave_accent_and_tilde",
+								"modifiers": ["command"]
+							}
+					]
+				}
       ]
-    }
+    },
+		{
+			"description": "Convert to En after Esc",
+			"manipulators": [
+				{
+          "type": "basic",
+          "from": {
+            "key_code": "escape"
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            }
+          ],
+					"to_after_key_up": [
+						{
+							"select_input_source": {
+								"language": "en"
+							}
+						},
+						{
+							"key_code": "escape"
+						}
+					]
+				}
+			]
+		}
   ]
 }
